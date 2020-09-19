@@ -4,9 +4,10 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm ci --only=production
-RUN apt install net-tools
-RUN apt install lsof
-RUN apt install htop
+RUN apt-get update
+RUN apt-get install net-tools
+RUN apt-get install lsof
+RUN apt-get install htop
 
 COPY . .
 
