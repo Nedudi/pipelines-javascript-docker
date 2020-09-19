@@ -1,19 +1,21 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: nedudipipelinesjavascriptdocker 
+  name: nedudipipelinesjavascriptdocker
+  labels:
+    app: nedudipipelinesjavascriptdocker
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: nedudipipelinesjavascriptdocker
+      app: nedudipipelinesjavascriptdocker
   template:
     metadata:
       labels:
-        name: nedudipipelinesjavascriptdocker 
+        app: nedudipipelinesjavascriptdocker
     spec:
       containers:
-        - name: nedudipipelinesjavascriptdocker 
+        - name: nedudipipelinesjavascriptdocker
           image: ganttpro.azurecr.io/nedudipipelinesjavascriptdocker
           ports:
           - containerPort: 8080
