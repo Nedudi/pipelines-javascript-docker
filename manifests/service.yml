@@ -4,9 +4,9 @@ metadata:
   name: frontend-service
 spec:
   type: LoadBalancer
-  ##loadBalancerIP: 20.54.233.86
+  loadBalancerIP: 20.54.137.126
   ports:
   - port: 80
     targetPort: 8080
   selector:
-      app: nedudipipelinesjavascriptdocker
+    app: nedudipipelinesjavascriptdocker
