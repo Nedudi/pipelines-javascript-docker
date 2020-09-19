@@ -4,7 +4,7 @@ metadata:
     name: frontend-service
 spec:
     type: LoadBalancer
-    loadBalancerIP: 20.54.233.86
+    ##loadBalancerIP: 20.54.233.86
     ports:
     - port: 80
       targetPort: 8080
