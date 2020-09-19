@@ -4,6 +4,9 @@ metadata:
   name: nedudipipelinesjavascriptdocker 
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      name: nedudipipelinesjavascriptdocker
   template:
     metadata:
       labels:
