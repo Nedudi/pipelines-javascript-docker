@@ -1,3 +1,4 @@
+#### NOT USED WHILE DEPLOY
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -12,12 +13,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /r
+        - path: /(.*)
           backend:
             serviceName: frontend-service
             servicePort: 80
-      #path: /(.*)
-      #- backend:
-      #    serviceName: hello-world-two
-      #    servicePort: 80
-      #  path: /hello-world-two(/|$)(.*)
