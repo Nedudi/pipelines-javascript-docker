@@ -6,13 +6,9 @@ spec:
   type: LoadBalancer
   loadBalancerIP: 20.54.137.126
   ports:
-  # - port: 8080
-  #   targetPort: 80
-  #   protocol: TCP
-  #   name: http
-  - port: 443
+  - port: 8080
+    targetPort: 80
     protocol: TCP
-    targetPort: 8080
-    name: https
+    name: http
   selector:
     app: nedudipipelinesjavascriptdocker
