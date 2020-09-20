@@ -3,7 +3,15 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- master
+  branches:
+    include: [ master ] # branch names which will trigger a build
+#    exclude: [ master ] # branch names which will not
+#  tags:
+#    include: [ master ] # tag names which will trigger a build
+#    exclude: [ master ] # tag names which will not
+  paths:
+    include: [ app ] # file paths which must match to trigger a build
+#    exclude: [ string ] # file paths which will not trigger a build
 
 resources:
 - repo: self
